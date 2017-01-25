@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+<h:body>
+
+	<h:form>
+            <p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" style="width:500px" />
+            <p:panelGrid columns="2" cellpadding="2" cellspacing="2" >
+                
+                <p:outputLabel for="username" value="Kullanıcı Adı: "/>
+                <p:inputText id="username" value="#{loginController.username}" size="30"/>
+                
+                <p:outputLabel for="password" value="Şifre: "/>
+                <p:password id="password" value="#{loginController.password}" size="30"/>
+                
+                <p:outputLabel/>
+                <p:commandButton action="#{loginController.login}" value="Giriş"/>
+            </p:panelGrid>
+        </h:form>
+
+</h:body>
+</html>
